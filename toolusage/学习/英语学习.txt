@@ -1,0 +1,14 @@
+Words
+receipt ÊÕ¾Ý
+
+
+Sentence
+1. Through static analysis of application packages, it extracts
+relevant security specifications in a format suitable for formal
+analysis. 
+
+2. Given a collection of specifications extracted in
+this way, a formal analysis engine (e.g., model checker) is
+then used to verify whether it is safe for a combination
+of applications¡ªholding certain permissions and potentially
+interacting with each other¡ªto be installed simultaneously.

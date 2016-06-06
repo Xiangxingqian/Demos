@@ -1,0 +1,29 @@
+Approach of EHB Testing
+1. 收集事件(collecting events)
+	1.1 扫描的对象有： 1. method 2. class 3. units
+	1.2 扫描pattern, 定义pattern对象，负责管理事件的收集和处理。 策略是： 尽可能多的收集（触发与否，分类讨论）
+		if(isPattern(object)) addLinkedList
+		
+	输出结果是: List of <view, object>
+2. 事件按所在活动归类(classify groups)
+	doRefelect()
+3. 定义事件触发事件(define trigger event for every activity)
+	doTest()
+4. 测试(do testing)
+
+	doActivity(M){
+		1. start M
+		2. click menu
+		3. M->A, 若A未被探索，则doActivity(A)
+	}
+	
+	exploreActivity(Activity Ai){
+		click menu
+		if jumps to an unexplored activity An, 
+			then exploreActivity(An) back to Ai.
+		else back to Ai.
+	}
+	
+	
+待考虑的细节
+1. doRefelect是非静态方法，不能被static方法调用, 重新设计一个static的deReflect方法。

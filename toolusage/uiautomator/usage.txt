@@ -1,0 +1,15 @@
+当TestCase写完之后，开始编译并部署工程
+Building and Deploying Your uiautomator Tests
+1. <android-sdk>/tools/android create uitest-project -n <name> -t 7 -p <path>
+<name> represents jar name
+<path> the category of tester
+
+Example: android create uitest-project -n ehb -t 7 -p .
+
+2. ant build
+
+3. adb push <path_to_output_jar> /data/local/tmp/
+
+运行测试用例
+Running uiautomator Tests
+adb shell uiautomator runtest ehb.jar -c LaunchSettings

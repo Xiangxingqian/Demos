@@ -1,0 +1,14 @@
+一、获取源代码
+0. 将APKNAME.apk复制到L:\APKDecompiled下
+1. 解压缩APKNAME.apk 获得classes.dex文件
+2. 将classes.dex文件复制到D:\apktoolAndDex\dex，并将classes.dex拖到dex2jar.bat
+3. 得到classes_dex2jar.jar文件，复制到L:\APKDecompiled\APKNAME下
+4. 将classes_dex2jar.jar文件拖到jd-gui中，并另存为classes_dex2jar.src.zip
+5. 解压缩得到classes_dex2jar.src
+
+1. 解压缩 C:\Program Files (x86)\HaoZip>HaoZipC e L:\APKDecompiled\APKNAME.apk -oL:\APKDecompiled\APKNAME classes.dex *.arsc 
+2. dex解压缩 C:\Program Files (x86)\HaoZip>D:\apktoolAndDex\dex\dex2jar.bat L:\APKDecompiled\APKNAME\classes.dex
+
+二、获得xml文件
+0. 进入到apk所在目录
+1. 执行以下命令 java -jar D:\apktoolAndDex\apktool\apktoolV2.jar d resources ..\APKNAME.apk -o resources

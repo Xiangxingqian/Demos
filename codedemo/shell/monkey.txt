@@ -1,0 +1,1 @@
+adb shell monkey -p <package> 10000 --ignore-crashes¡¢--ignore-timeouts¡¢--ignore-security-exceptions¡¢--monitor-native-crashes > FILENAME

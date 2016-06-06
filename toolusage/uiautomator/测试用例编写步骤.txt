@@ -1,0 +1,4 @@
+1. 新建Java Project，工程名为EHBTests
+2. 给工程添加JUnit library和android.jar, uiautomator.jar.
+3. 在src目录下新建一个LaunchSettings类，继承UiAutomatorTestCase。
+4. 重写父类的testDemo()方法，在其中添加自定义功能。

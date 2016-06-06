@@ -1,0 +1,234 @@
+命令： adb shell dumpsys activity
+   authority=com.android.email.suggestionsprovider
+ * ContentProviderRecord{b2f86e10 u0 com.android.launcher/com.android.launcher2
+LauncherProvider}
+   proc=ProcessRecord{b2f62238 535:com.android.launcher/u0a8}
+   authority=com.android.launcher2.settings
+ * ContentProviderRecord{b2f997e0 u0 com.android.providers.contacts/.debug.Dump
+ileProvider}
+   proc=ProcessRecord{b2f40060 589:android.process.acore/u0a2}
+   authority=com.android.contacts.dumpfile
+ * ContentProviderRecord{b2f111c8 u0 com.android.providers.media/.MediaProvider
+
+   proc=ProcessRecord{b2f3bfb8 470:android.process.media/u0a5}
+   authority=media
+ * ContentProviderRecord{b2f57980 u0 com.android.providers.telephony/.MmsProvid
+r}
+   proc=ProcessRecord{b2f09d90 521:com.android.phone/1001}
+   authority=mms
+ * ContentProviderRecord{b3015380 u0 com.android.email/com.android.mail.provide
+s.EmlAttachmentProvider}
+   proc=ProcessRecord{b2fa29f0 1004:com.android.email/u0a24}
+   authority=com.android.email.provider.eml.attachment
+ * ContentProviderRecord{b3015510 u0 com.android.email/.provider.AttachmentProv
+der}
+   proc=ProcessRecord{b2fa29f0 1004:com.android.email/u0a24}
+   authority=com.android.email.attachmentprovider
+ * ContentProviderRecord{b2f57d30 u0 com.android.providers.telephony/.SmsProvid
+r}
+   proc=ProcessRecord{b2f09d90 521:com.android.phone/1001}
+   authority=sms
+ * ContentProviderRecord{b2f57dc8 u0 com.android.providers.telephony/.Telephony
+rovider}
+   proc=ProcessRecord{b2f09d90 521:com.android.phone/1001}
+   authority=telephony
+ * ContentProviderRecord{b2fdea18 u0 com.android.settings/android.support.v4.co
+tent.FileProvider}
+   proc=ProcessRecord{b2eb44a0 768:com.android.settings/1000}
+   authority=com.android.settings.files
+ * ContentProviderRecord{b2f35178 u0 com.android.providers.downloads/.DownloadP
+ovider}
+   proc=ProcessRecord{b2f3bfb8 470:android.process.media/u0a5}
+   authority=downloads
+ * ContentProviderRecord{b2eaa370 u0 com.android.externalstorage/.ExternalStora
+eProvider}
+   proc=ProcessRecord{b2ff4598 749:com.android.externalstorage/u0a6}
+   authority=com.android.externalstorage.documents
+ * ContentProviderRecord{b30155a8 u0 com.android.email/com.android.mail.browse.
+mailConversationProvider}
+   proc=ProcessRecord{b2fa29f0 1004:com.android.email/u0a24}
+   authority=com.android.email2.conversation.provider
+ * ContentProviderRecord{b3049e78 u0 com.android.browser/.homepages.HomeProvide
+}
+   proc=ProcessRecord{b305fa98 1107:com.android.browser/u0a14}
+   authority=com.android.browser.home
+ * ContentProviderRecord{b2f60d60 u0 com.android.providers.calendar/.CalendarPr
+vider2}
+   proc=ProcessRecord{b3049558 919:com.android.providers.calendar/u0a1}
+   authority=com.android.calendar
+   1 connections, 0 external handles
+     -> 966:com.android.calendar/u0a16 s1/3 u0/1 +9m51s873ms
+ * ContentProviderRecord{b303d6b0 u0 com.android.exchange/.provider.ExchangeDir
+ctoryProvider}
+   proc=ProcessRecord{b2ff4110 1024:com.android.exchange/u0a25}
+   authority=com.android.exchange.directory.provider
+ * ContentProviderRecord{b2f66118 u0 com.android.providers.media/.MediaDocument
+Provider}
+   proc=ProcessRecord{b2f3bfb8 470:android.process.media/u0a5}
+   authority=com.android.providers.media.documents
+ * ContentProviderRecord{b2f56568 u0 com.android.inputmethod.latin/com.android.
+nputmethod.dictionarypack.DictionaryProvider}
+   proc=ProcessRecord{b2cb7b30 508:com.android.inputmethod.latin/u0a29}
+   authority=com.android.inputmethod.dictionarypack.aosp
+ * ContentProviderRecord{b2fc7fb8 u0 com.android.deskclock/.provider.ClockProvi
+er}
+   proc=ProcessRecord{b2f4e888 987:com.android.deskclock/u0a20}
+   authority=com.android.deskclock
+ * ContentProviderRecord{b2f99878 u0 com.android.providers.contacts/.ContactsPr
+vider2}
+   proc=ProcessRecord{b2f40060 589:android.process.acore/u0a2}
+   authority=contacts;com.android.contacts
+ * ContentProviderRecord{b2f581d0 u0 com.android.providers.telephony/.MmsSmsPro
+ider}
+   proc=ProcessRecord{b2f09d90 521:com.android.phone/1001}
+   authority=mms-sms
+ * ContentProviderRecord{b2f661b0 u0 com.android.providers.downloads/.DownloadS
+orageProvider}
+   proc=ProcessRecord{b2f3bfb8 470:android.process.media/u0a5}
+   authority=com.android.providers.downloads.documents
+ * ContentProviderRecord{b3048f08 u0 com.android.browser/.provider.SnapshotProv
+der}
+   proc=ProcessRecord{b305fa98 1107:com.android.browser/u0a14}
+   authority=com.android.browser.snapshots
+ * ContentProviderRecord{b2f9a080 u0 com.android.providers.contacts/.CallLogPro
+ider}
+   proc=ProcessRecord{b2f40060 589:android.process.acore/u0a2}
+   launchingApp=ProcessRecord{b2f40060 589:android.process.acore/u0a2}
+   authority=call_log
+ * ContentProviderRecord{b2f7ac48 u0 com.android.providers.userdictionary/.User
+ictionaryProvider}
+   proc=ProcessRecord{b2f40060 589:android.process.acore/u0a2}
+   launchingApp=ProcessRecord{b2f40060 589:android.process.acore/u0a2}
+   authority=user_dictionary
+
+CTIVITY MANAGER SERVICES (dumpsys activity services)
+ User 0 active services:
+ * ServiceRecord{b2ee2ef0 u0 com.android.systemui/.ImageWallpaper}
+   app=ProcessRecord{b2f21e90 679:com.android.systemui/u0a7}
+   created=-12m39s918ms started=false connections=1
+   Connections:
+     act=android.service.wallpaper.WallpaperService -> 372:system/1000
+ * ServiceRecord{b2ecf078 u0 com.android.inputmethod.latin/.LatinIME}
+   app=ProcessRecord{b2cb7b30 508:com.android.inputmethod.latin/u0a29}
+   created=-12m39s586ms started=false connections=1
+   Connections:
+     act=android.view.InputMethod -> 372:system/1000
+ * ServiceRecord{b2f21770 u0 com.android.keyguard/.KeyguardService}
+   app=ProcessRecord{b2f21e90 679:com.android.systemui/u0a7}
+   created=-12m51s230ms started=false connections=1
+   Connections:
+      -> 372:system/1000
+ * ServiceRecord{b2f3a918 u0 com.android.systemui/.SystemUIService}
+   app=ProcessRecord{b2f21e90 679:com.android.systemui/u0a7}
+   created=-12m51s17ms started=true connections=0
+ * ServiceRecord{b2f2da68 u0 android/.hardware.location.GeofenceHardwareService
+
+   app=ProcessRecord{b2e32e10 372:system/1000}
+   created=-12m39s412ms started=false connections=1
+   Connections:
+      -> 372:system/1000
+ * ServiceRecord{b2ee5598 u0 android/com.android.internal.backup.LocalTransport
+ervice}
+   app=ProcessRecord{b2e32e10 372:system/1000}
+   created=-12m51s550ms started=false connections=1
+   Connections:
+     act=android.backup.TRANSPORT_HOST -> 372:system/1000
+ * ServiceRecord{b2f49800 u0 com.android.location.fused/.FusedLocationService}
+   app=ProcessRecord{b2e32e10 372:system/1000}
+   created=-12m39s473ms started=false connections=1
+   Connections:
+     act=com.android.location.service.FusedLocationProvider pkg=com.android.loc
+tion.fused -> 372:system/1000
+ * ServiceRecord{b2f63e18 u0 com.android.phone/.TelephonyDebugService}
+   app=ProcessRecord{b2f09d90 521:com.android.phone/1001}
+   created=-12m29s581ms started=true connections=0
+
+CTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+ Stack #0:
+   Task id #1
+     TaskRecord{b2f61460 #1 A=com.android.launcher U=0 sz=1}
+     Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME]
+flg=0x10000000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+       Hist #0: ActivityRecord{b2f5f720 u0 com.android.launcher/com.android.lau
+cher2.Launcher t1}
+         Intent { act=android.intent.action.MAIN cat=[android.intent.category.H
+ME] flg=0x10000000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+         ProcessRecord{b2f62238 535:com.android.launcher/u0a8}
+
+   Running activities (most recent first):
+     TaskRecord{b2f61460 #1 A=com.android.launcher U=0 sz=1}
+       Run #0: ActivityRecord{b2f5f720 u0 com.android.launcher/com.android.laun
+her2.Launcher t1}
+
+   mResumedActivity: ActivityRecord{b2f5f720 u0 com.android.launcher/com.androi
+.launcher2.Launcher t1}
+
+ Stack #1:
+   Task id #4
+     TaskRecord{b30589e0 #4 A=android.task.browser U=0 sz=1}
+     Intent { act=android.intent.action.VIEW cat=[android.intent.category.DEFAU
+T] dat=http://*.pdf cmp=com.android.browser/.BrowserActivity }
+       Hist #0: ActivityRecord{b3052080 u0 com.android.browser/.BrowserActivity
+t4}
+         Intent { act=android.intent.action.VIEW cat=[android.intent.category.D
+FAULT] dat=http://*.pdf cmp=com.android.browser/.BrowserActivity }
+         ProcessRecord{b305fa98 1107:com.android.browser/u0a14}
+
+   Running activities (most recent first):
+     TaskRecord{b30589e0 #4 A=android.task.browser U=0 sz=1}
+       Run #0: ActivityRecord{b3052080 u0 com.android.browser/.BrowserActivity
+4}
+
+ mFocusedActivity: ActivityRecord{b2f5f720 u0 com.android.launcher/com.android.
+auncher2.Launcher t1}
+ mDismissKeyguardOnNextActivity=false
+ mFocusedStack=ActivityStack{b301eb98 stackId=2, 1 tasks} mStackState=STACK_STA
+E_HOME_IN_FRONT
+ mSleepTimeout=false
+ mCurTaskId=4
+ mUserStackInFront={}
+
+ Recent tasks:
+ * Recent #0: TaskRecord{b2f61460 #1 A=com.android.launcher U=0 sz=1}
+ * Recent #1: TaskRecord{b301f568 #3 A=com.example.qian U=0 sz=0}
+ * Recent #2: TaskRecord{b30589e0 #4 A=android.task.browser U=0 sz=1}
+ * Recent #3: TaskRecord{b3018380 #2 A=jp.sblo.pandora.aGrep U=0 sz=0}
+
+CTIVITY MANAGER RUNNING PROCESSES (dumpsys activity processes)
+ Process LRU list (sorted by oom_adj, 22 total, non-act at 2, non-svc at 2):
+   PERS #21: sys   F/ /P  trm: 0 372:system/1000 (fixed)
+   PERS #20: pers  F/ /P  trm: 0 521:com.android.phone/1001 (fixed)
+   PERS #18: pers  F/ /P  trm: 0 679:com.android.systemui/u0a7 (fixed)
+   Proc # 0: fore  F/A/T  trm: 0 535:com.android.launcher/u0a8 (top-activity)
+   Proc # 4: prcp  F/ /IF trm: 0 508:com.android.inputmethod.latin/u0a29 (servi
+e)
+       com.android.inputmethod.latin/.LatinIME<=Proc{372:system/1000}
+   Proc # 1: prev  B/ /LA trm: 0 1107:com.android.browser/u0a14 (previous)
+   Proc # 3: cch   B/ /CE trm: 0 879:jp.sblo.pandora.aGrep/u0a52 (cch-empty)
+   Proc # 2: cch   B/ /CE trm: 0 1089:com.example.qian/u0a54 (cch-empty)
+   Proc # 6: cch+2 B/ /CE trm: 0 987:com.android.deskclock/u0a20 (cch-empty)
+   Proc # 5: cch+2 B/ /CE trm: 0 919:com.android.providers.calendar/u0a1 (cch-e
+pty)
+   Proc # 8: cch+4 B/ /CE trm: 0 1004:com.android.email/u0a24 (cch-empty)
+   Proc # 7: cch+4 B/ /CE trm: 0 966:com.android.calendar/u0a16 (cch-empty)
+   Proc #19: cch+6 B/ /CE trm: 0 559:com.android.printspooler/u0a39 (cch-empty)
+
+   Proc #17: cch+6 B/ /CE trm: 0 589:android.process.acore/u0a2 (cch-empty)
+   Proc #16: cch+6 B/ /CE trm: 0 749:com.android.externalstorage/u0a6 (cch-empt
+)
+   Proc #15: cch+6 B/ /CE trm: 0 787:com.android.music/u0a32 (cch-empty)
+   Proc #14: cch+6 B/ /CE trm: 0 901:com.android.dialer/u0a4 (cch-empty)
+   Proc #13: cch+6 B/ /CE trm: 0 1024:com.android.exchange/u0a25 (cch-empty)
+   Proc #12: cch+6 B/ /CE trm: 0 800:cri.sanity/u0a57 (cch-empty)
+   Proc #11: cch+6 B/ /CE trm: 0 470:android.process.media/u0a5 (cch-empty)
+   Proc #10: cch+6 B/ /CE trm: 0 768:com.android.settings/1000 (cch-empty)
+   Proc # 9: cch+6 B/ /CE trm: 0 940:com.android.mms/u0a9 (cch-empty)
+
+ mStartedUsers:
+   User #0: mState=RUNNING
+ mStartedUserArray: [0]
+ mUserLru: [0]
+ mHomeProcess: ProcessRecord{b2f62238 535:com.android.launcher/u0a8}
+ mPreviousProcess: ProcessRecord{b305fa98 1107:com.android.browser/u0a14}
+ mConfiguration: {1.0 310mcc260mnc en_US ldltr sw320dp w320dp h455dp 160dpi nrm
+ port finger qwerty/v/v tball/v s.5}

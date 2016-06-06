@@ -1,0 +1,102 @@
+1. Soot内部类型对应的语句
+1.1 $r8 = virtualinvoke $r0.<cz.romario.opensudoku.gui.SudokuImportActivity: android.view.Window getWindow()>()
+右值类型 class soot.jimple.internal.JVirtualInvokeExpr
+
+1.2 $r9 = (android.widget.ProgressBar) $r7 
+右值类型 class soot.jimple.internal.JCastExpr
+
+1.3 $r4 = "application/x-opensudoku" 
+右值类型 class soot.jimple.StringConstant
+
+1.4 r14 = new cz.romario.opensudoku.gui.importing.OpenSudokuImportTask
+右值类型 class soot.jimple.internal.JNewExpr
+
+1.5 $r5 = r14 
+右值类型：class soot.jimple.internal.JimpleLocal
+
+1.6 $r10 = $r0.<cz.romario.opensudoku.gui.SudokuImportActivity: cz.romario.opensudoku.gui.importing.AbstractImportTask$OnImportFinishedListener mOnImportFinishedListener> 
+右值类型：class soot.jimple.internal.JInstanceFieldRef
+
+1.7 $r11 = newarray (java.lang.Void)[$i1] 
+右值类型class soot.jimple.internal.JNewArrayExpr
+
+1.8 $r12 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("Unknown type of data provided (mime-type=%s; uri=%s), exiting.", $r13) 
+右值类型： class soot.jimple.internal.JStaticInvokeExpr
+
+1.9 $r16 = JInterfaceinvoke .............   类型是：jinterfaceInvoke
+
+1.10 1 类型是:class soot.jimple.IntConstant
+1.11 (int) 1 类型是:class soot.jimple.internal.JCastExpr
+1.12 <com.google.android.apps.translate.k: int widget_floating_input_card> 
+类型是:class soot.jimple.StaticFieldRef
+
+1.13 $r0.<com.google.android.apps.translate.widget.FloatingInputCard: com.google.android.apps.translate.widget.PartialStateView b> 
+类型是:class soot.jimple.internal.JInstanceFieldRef
+
+1.14 $i0 + $i1 类型是:class soot.jimple.internal.JAddExpr
+1.15 $r16.<android.graphics.Rect: int bottom> 类型是:class soot.jimple.internal.JInstanceFieldRef
+
+1.16 $i1 - $i0 类型是:class soot.jimple.internal.JSubExpr
+
+2. 测试PAG中能够进行指针分析的类型
+$r0 com.google.android.apps.translate.widget.FloatingInputCard-----[AllocNode 181 new com.google.android.apps.translate.widget.FloatingInputCard in method <dummyMainClass: void dummyMainMethod()>]
+$r1 android.content.Context-----[]
+$r2 android.util.AttributeSet-----[]
+$r3 android.view.LayoutInflater-----[]
+$i0 int-----[]
+$z1 boolean-----[]
+$r4 android.view.View-----[]
+$r5 com.google.android.apps.translate.widget.LanguagePicker-----[]
+$r6 com.google.android.apps.translate.widget.PartialStateView-----[]
+$r7 android.os.Handler-----[AllocNode 1197 new android.os.Handler in method <com.google.android.apps.translate.widget.FloatingInputCard: void <init>(android.content.Context,android.util.AttributeSet)>]
+$r8 com.google.android.apps.translate.widget.SpeakerView-----[]
+$r9 android.widget.TextView-----[]
+$r10 com.google.android.apps.translate.widget.InputTextView-----[]
+$r11 android.os.Message-----[]
+$r12 com.google.android.apps.translate.d.h-----[AllocNode 1198 new com.google.android.apps.translate.d.h in method <com.google.android.apps.translate.widget.FloatingInputCard: void <init>(android.content.Context,android.util.AttributeSet)>]
+$r13 com.google.android.libraries.translate.languages.Language-----[]
+$r14 com.google.android.apps.translate.d.n-----[AllocNode 1199 new com.google.android.apps.translate.d.n in method <com.google.android.apps.translate.widget.FloatingInputCard: void <init>(android.content.Context,android.util.AttributeSet)>]
+$r15 android.view.View-----[]
+$r16 android.graphics.Rect-----[AllocNode 1200 new android.graphics.Rect in method <com.google.android.apps.translate.widget.FloatingInputCard: void <init>(android.content.Context,android.util.AttributeSet)>]
+$r17 android.graphics.drawable.Drawable-----[]
+$r18 android.content.res.Resources-----[]
+$i1 int-----[]
+$r19 android.view.ViewGroup$LayoutParams-----[]
+$r20 int[]-----[AllocNode 1201 newarray (int)[2] in method <com.google.android.apps.translate.widget.FloatingInputCard: void <init>(android.content.Context,android.util.AttributeSet)>]
+测试结果：PAG只识别能被初始化的类的指针分析。分析的结束语句时init语句。
+PAG不分析由非实例化产生的类型
+
+3. 问题：在java中，一个类的实例在一个方法中可以有多个变量；但在jimple中，一个类的实例在一个方法中只有一个变量？
+答案是：jimple在转换时，将一个类的多个变量都用一个局部变量来表示，无论在java中，m有n个Uri变量，在jimple中，都只存在一个$r1。
+这跟字节码中的表示形式是统一的。
+PS：对于基本类型，此条正好相反。
+在java中，一个基本类型的一个变量可以在赋值多次；但在jimple中，若一个变量被赋值多次，则用多个变量来分别表示这些值。
+扯淡
+
+4. jimple命名规范：对于对象类型，变量名统一以$r开头，如$r1；而对于基本类型，则会出现不一致的情形：
+int i ==> int i0 或 int i ==> int $i0 
+long l ==> long l0 或 long l ==> long $l0
+基本类型：int以i开头取名，long以l开头取名， boolean以z开头取名
+
+5. 问题：在一个方法m中，local引用了field的值，那么要求这个field对应的值？
+步骤：1. 获得fieldRef。
+2. 求init和clinit中field定义的值
+3. 匹配两个field是否相等，不能用fieldRef匹配，而应该采用sootField来匹配。
+
+引申： soot中，大部分对象都没有重写equalsTo方法。因而Object对象的equalsTo方法的匹配规则即所有对象的匹配规则。
+Object的匹配规则是：若两个对象都指向同一块内存空间，则两者相等。
+
+6. Soot的转换Java to Jimple的规则
+问题：给定一个Java code，如何转换成Jimple code.
+
+
+
+
+
+
+
+
+
+
+
+
