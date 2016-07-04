@@ -1,0 +1,8 @@
+digraph G {
+A -> B [dir=both color="red:blue"]
+A -> C [dir=none color="green:red;0.25:blue"]
+A -> E
+A -> D
+E -> F
+B -> D
+}

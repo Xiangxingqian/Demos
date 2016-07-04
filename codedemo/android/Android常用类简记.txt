@@ -1,0 +1,17 @@
+SharedPreference
+SharedPreferences sp = getSharedPreferences("user", ContextWrapper.MODE_PRIVATE);
+SharedPreferences.Editor editor = sp.edit();
+
+[SQLite]  SQLiteDataBase, SQLiteOpenHelper
+创建或打开数据库
+SQLiteDataBase db = SQLiteDataBase.openOrCreateDataBase("/data/data/temp.db", null);
+使用SQLiteOpenHelper管理数据库步骤:
+1. extends SQLiteOpenHelper
+2. override onCreate() and onUpgrade()
+3. add insert, query and delete()
+
+数据库
+Having, Group by和Order by区别
+Order by：排列方式，递增或递减。
+Group By: 分组。分组后计算聚合
+Having必须Group By同时使用，Having筛选Group。使用场景不同, 筛选部门A中工资>2000的人员数目。
