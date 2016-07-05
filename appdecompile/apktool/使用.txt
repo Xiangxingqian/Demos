@@ -1,0 +1,7 @@
+apktool.bat d *.apk *
+
+
+ÀıÈç£ºapktool.bat d qian.apk qian
+
+
+java -jar apktoolV2.jar d gmail gmail.apk
