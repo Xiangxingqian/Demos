@@ -1,15 +1,15 @@
-当TestCase写完之后，开始编译并部署工程
-Building and Deploying Your uiautomator Tests
+编写测试用例
+1. 新建Java Project，工程名为EHBTests
+2. 给工程添加JUnit library和android.jar, uiautomator.jar.
+3. 在src目录下新建一个LaunchSettings类，继承UiAutomatorTestCase。
+4. 重写父类的testDemo()方法，在其中添加自定义功能。
+
+编译部署测试用例
 1. <android-sdk>/tools/android create uitest-project -n <name> -t 7 -p <path>
 <name> represents jar name
 <path> the category of tester
-
 Example: android create uitest-project -n ehb -t 7 -p .
-
 2. ant build
-
 3. adb push <path_to_output_jar> /data/local/tmp/
-
-运行测试用例
-Running uiautomator Tests
-adb shell uiautomator runtest ehb.jar -c LaunchSettings
+4. Running uiautomator Tests
+Example: adb shell uiautomator runtest ehb.jar -c LaunchSettings
