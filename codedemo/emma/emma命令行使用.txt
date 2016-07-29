@@ -1,0 +1,9 @@
+cd E:\workspace\HelloWorld //进入到工程目录
+javac -d out -g src/*.java //编译*.java文件
+java -cp D:\libs\emma.jar emma instr -d outinstr -ip out //插桩的代码在outinstr目录下
+
+//下面代码运行不成功
+java -cp outinstr;out Main
+java emma report -r txt,html -in coverage.em -in coverage.ec
+java emma merge -in coverage.em -in coverage.ec -out coverage.es
+链接http://emma.sourceforge.net/userguide/ar01s02s03.html
