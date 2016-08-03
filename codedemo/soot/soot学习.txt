@@ -1,0 +1,10 @@
+1. 插桩语句时需要注意：
+	a. 语句不能插桩在this语句和catchException语句的前面
+	b. 异常的捕捉使用trap语句: 
+		Trap trap = Jimple.v().newTrap(Scene.v().getSootClass("java.lang.Exception"), tryAssignStmt, addGotoStmt, label5);
+		body.getTraps().add(trap);
+		catch java.lang.Throwable from label01 to label02 with label09;
+	c. Jimple中的label01是其下方紧接着的语句引用表示
+	d. UnitGraph中的ifStmt的后继为其本身，因为ifStmt的后继时gotom语句，而ifStmt语句又包含goto语句，因此后继为ifStmt。
+	这种情况会导致UnitGraph的前向遍历不能完成，但后向遍历是能够遍历整个图的。
+	e. 在一个method中，存在某些语句，没有前驱但不是入口语句。比如catch语句。
